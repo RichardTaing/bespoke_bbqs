@@ -74,7 +74,7 @@ router.post("/login", (req, res, next) => {
         });
       } else {
         // Load hash from your password DB.
-        //const user = user[0];
+        const user = user[0];
         bcrypt.compare(req.body.password, user[0].password, function(
           err,
           result
