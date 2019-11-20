@@ -41,7 +41,7 @@ class Cart extends Component {
         auth.user.userId,
         product
       );
-      if (response.ok == 1) {
+      if (response.ok === 1) {
         const { cartItems } = this.state;
         this.setState({
           cartItems: cartItems.map(item =>

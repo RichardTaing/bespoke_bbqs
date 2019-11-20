@@ -12,7 +12,9 @@ class Products extends Component {
 
   componentDidMount() {
     const slug =
-      this.props.match.params.slug == "all" ? "" : this.props.match.params.slug;
+      this.props.match.params.slug === "all"
+        ? ""
+        : this.props.match.params.slug;
     this.getProducts(slug);
     this.props.getCategories();
   }
@@ -28,14 +30,16 @@ class Products extends Component {
   };
 
   componentDidUpdate(prevProps) {
-    if (this.props.match.params.slug != prevProps.match.params.slug) {
+    if (this.props.match.params.slug !== prevProps.match.params.slug) {
       this.getProducts(this.props.match.params.slug);
     }
   }
 
   applyFilter = filter => {
     const slug =
-      this.props.match.params.slug == "all" ? "" : this.props.match.params.slug;
+      this.props.match.params.slug === "all"
+        ? ""
+        : this.props.match.params.slug;
     this.getProducts(slug, filter);
   };
 

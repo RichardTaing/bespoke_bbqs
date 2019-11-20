@@ -6,7 +6,7 @@ export const GET_PRODUCT_CATEGORIES = "GET_PRODUCT_CATEGORIES";
 export const getProducts = (categorySlug = "", filter) => {
   return async dispatch => {
     try {
-      categorySlug = categorySlug == "all" ? "" : categorySlug;
+      categorySlug = categorySlug === "all" ? "" : categorySlug;
 
       let query = "";
       if (filter) {
@@ -21,7 +21,7 @@ export const getProducts = (categorySlug = "", filter) => {
         `${base_url}/products/${categorySlug}${query}`
       );
       const jsonResponse = await response.json();
-      if (response.status == 200) {
+      if (response.status === 200) {
         dispatch({
           type: GET_PRODUCTS,
           products: jsonResponse.message
