@@ -97,7 +97,7 @@ class Signup extends Component {
         this.props.history.push({
           pathname: "/login",
           search: "?signup=success",
-          state: jsonResponse.message
+          state: "jsonResponse.message"
         });
       })
       .catch(error => {
