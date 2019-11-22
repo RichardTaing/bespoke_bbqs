@@ -8,7 +8,7 @@ const Logo = props => {
     <Link to="/">
       <div className="Logo" {...props}>
         {/* <img src="./logo/logo.png" /> */}
-        <span>Bespoke BBQS</span>
+        <span>Bespoke BBQ's</span>
       </div>
     </Link>
   );

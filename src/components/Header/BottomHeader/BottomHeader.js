@@ -62,31 +62,31 @@ class BottomHeader extends Component {
               {cat}
               {/* <li className="Column">
                               <span className="ColumnTitle">
-                                  <Link to="">Accessories</Link>
+                                  <Link to="">Meat</Link>
                               </span>
                               <ul className="ColumnSubMenu">
-                                  <li><Link to="">Handbags</Link></li>
-                                  <li><Link to="">Shoes</Link></li>
-                                  <li><Link to="">Watches</Link></li>
+                                  <li><Link to="">Red Meat</Link></li>
+                                  <li><Link to="">White Meat</Link></li>
+                                  <li><Link to="">Seafood</Link></li>
                               </ul> 
                            </li>
                            <li className="Column">
                                 <span className="ColumnTitle">
-                                    <Link to="">Shirts & Tops</Link>
+                                    <Link to="">Bespoke BBQ Packs</Link>
                                 </span>
                                 <ul className="ColumnSubMenu">
-                                    <li><Link to="">Dresses</Link></li>
-                                    <li><Link to="">Polos</Link></li>
-                                    <li><Link to="">Tshirts</Link></li>
-                                    <li><Link to="">Women Dresses</Link></li>
+                                    <li><Link to="">Bespoke BBQ Small</Link></li>
+                                    <li><Link to="">Bespoke BBQ Smokers</Link></li>
+                                    <li><Link to="">Bespoke BBQ Family</Link></li>
+                                    <li><Link to="">Bespoke BBQ Party</Link></li>
                                 </ul> 
                             </li>
                             <li className="Column">
                                 <span className="ColumnTitle">
-                                    <Link to="">Swimsuits</Link>
+                                    <Link to="">Sauces, Spices and Rubs</Link>
                                 </span>
                                 <ul className="ColumnSubMenu">
-                                    <li><Link to="">Shorts</Link></li>
+                                    <li><Link to="">Bespoke BBQ Sauce</Link></li>
                                 </ul> 
                             </li> */}
             </ul>

@@ -48,7 +48,6 @@ class TopHeader extends Component {
       <div className="TopHeader">
         <div className="SocialMediaIcons">
           <i className="fab fa-facebook-f"></i>
-          <i className="fab fa-google-plus-g"></i>
           <i className="fab fa-instagram"></i>
           <i className="fab fa-youtube"></i>
         </div>

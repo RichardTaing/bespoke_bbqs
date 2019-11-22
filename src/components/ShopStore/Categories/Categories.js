@@ -8,28 +8,28 @@ const Categories = prosp => {
       <ul class="CategoryList">
         <li>
           <span>
-            <a href="#">Accessories</a>
+            <a href="#">Meat</a>
           </span>
           <ul>
             <li>
-              <a href="#">Handbags</a>
+              <a href="#">Red Meat</a>
             </li>
             <li>
-              <a href="#">Shoes</a>
+              <a href="#">White Meat</a>
             </li>
             <li>
-              <a href="#">Watches</a>
+              <a href="#">Seafood</a>
             </li>
           </ul>
         </li>
         <li>
           <span>
-            <a href="#">Shirt & Tops</a>
+            <a href="#">Bespoke BBQ Packs</a>
           </span>
         </li>
         <li>
           <span>
-            <a href="#">Swimsuits</a>
+            <a href="#">Sauces, Spices and Rubs</a>
           </span>
         </li>
       </ul>
