@@ -1,0 +1,6 @@
+{
+  "env": {
+    "MONGODB_USERNAME": "bespoke_bbqs",
+    "MONGODB_PASSWORD": "MonashBootCamp2019"
+  }
+}

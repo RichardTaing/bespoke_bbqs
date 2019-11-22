@@ -6,13 +6,14 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const authenticate = require("./api/middleware/authenticate");
 
+console.log(process.env.MONGODB_USERNAME, process.env.MONGODB_PASSWORD);
 mongoose.connect(
   "mongodb+srv://" +
-    process.env.MONGODB_USERNAME +
+    "bespoke_bbqs" +
     ":" +
-    process.env.MONGODB_PASSWORD +
+    "MonashBootCamp2019" +
     "@bespoke-bbqs-cstz7.mongodb.net/test",
-  { useNewUrlParser: true }
+  { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
 const adminRoutes = require("./api/routes/admins");
