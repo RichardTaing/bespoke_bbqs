@@ -8,12 +8,14 @@ const authenticate = require("./api/middleware/authenticate");
 
 console.log(process.env.MONGODB_USERNAME, process.env.MONGODB_PASSWORD);
 mongoose.connect(
-  "mongodb+srv://" +
-    "bespoke_bbqs" +
-    ":" +
-    "MonashBootCamp2019" +
-    "@bespoke-bbqs-cstz7.mongodb.net/test",
-  { useNewUrlParser: true, useUnifiedTopology: true }
+  process.env.CONNECTION_STRING,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  err => {
+    if (err) {
+      console.log("Database Error----------------", err);
+    }
+    console.log("Connected to database");
+  }
 );
 
 const adminRoutes = require("./api/routes/admins");
