@@ -22,6 +22,7 @@ router.get("/", (req, res, next) => {
 });
 
 router.post("/signup", (req, res, next) => {
+  console.log(req.body);
   Admin.find({ email: req.body.email })
     .exec()
     .then(user => {
@@ -33,6 +34,7 @@ router.post("/signup", (req, res, next) => {
         bcrypt.hash(req.body.password, 10, function(err, hash) {
           // Store hash in your password DB.
           if (err) {
+            console.log(err);
             return res.status(500).json({
               error: err
             });
@@ -65,6 +67,7 @@ router.post("/signup", (req, res, next) => {
 });
 
 router.post("/login", (req, res, next) => {
+  console.log(req.body);
   Admin.find({ email: req.body.email })
     .exec()
     .then(user => {
@@ -74,11 +77,9 @@ router.post("/login", (req, res, next) => {
         });
       } else {
         // Load hash from your password DB.
-        const user = user[0];
-        bcrypt.compare(req.body.password, user[0].password, function(
-          err,
-          result
-        ) {
+        const User = user[0];
+        console.log(`Found user : ${User.email}`);
+        bcrypt.compare(req.body.password, User.password, function(err, result) {
           console.log("err", err);
           console.log("result", result);
 
@@ -89,8 +90,9 @@ router.post("/login", (req, res, next) => {
           } else {
             if (result) {
               // Create token
+              console.log("Creating JWT Token");
               const payload = {
-                userId: user[0]._id,
+                userId: User._id,
                 iat: Math.floor(Date.now() / 1000) - 30,
                 exp: Math.floor(Date.now() / 1000) + 60 * 60
               };
@@ -116,6 +118,7 @@ router.post("/login", (req, res, next) => {
       }
     })
     .catch(er => {
+      console.log(er);
       res.status(500).json({
         error: er
       });

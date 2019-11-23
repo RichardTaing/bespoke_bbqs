@@ -6,6 +6,7 @@ const Category = require("../models/category");
 const authenticate = require("../middleware/authenticate");
 
 router.post("/create", authenticate, (req, res, next) => {
+  console.log(req.body);
   const slug = req.body.name.replace(/ /g, "-") + "-" + Date.now();
 
   const product = new Product({
@@ -29,6 +30,7 @@ router.post("/create", authenticate, (req, res, next) => {
       });
     })
     .catch(er => {
+      console.log(er);
       res.status(500).json({
         error: er
       });
