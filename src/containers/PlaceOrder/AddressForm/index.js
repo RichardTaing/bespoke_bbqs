@@ -29,9 +29,9 @@ const AddressForm = props => {
       <div className="Row">
         <div style={{ width: "49%" }}>
           <NormalInput
-            name="pinCode"
-            value={address.pinCode}
-            placeholder={"Pincode"}
+            name="postCode"
+            value={address.postCode}
+            placeholder={"postCode"}
             inputHandler={props.inputHandler}
             type="text"
           />
